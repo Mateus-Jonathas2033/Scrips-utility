@@ -1,0 +1,22 @@
+To make your service automation run follow the instructions:
+
+### move the files to their correctly dir:
+sudo mv *.service* *.timer* /etc/systemd/system/ && sudo mv battery_stats.sh /usr/local/bin
+
+
+### restart daemon systemctl:
+sudo systemctl daemon-reload
+
+### enable services on boot and start right now:
+sudo systemctl enable --now battery_stats.service && sudo systemctl enable --now battery_stats.timer
+
+### all the logs file is in /usr/local/bin/battery_logs, to see use:
+ll /usr/local/bin/battery_logs
+
+or
+
+cat /usr/local/bin/battery_logs/file
+
+or
+
+xdg-open /usr/local/bin/battery_logs

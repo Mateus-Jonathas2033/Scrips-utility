@@ -1,0 +1,9 @@
+[Unit]
+Description=Timer for 'battery_stats.timer', executation each 1hour.
+
+[Timer]
+OnCalendar=*:0/59
+Persistent=true
+
+[Install]
+WantedBy=timers.target

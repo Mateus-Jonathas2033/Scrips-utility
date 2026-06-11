@@ -1,0 +1,10 @@
+[Unit]
+Description=This service will monitor battery life of your device
+Wants=battery_stats.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/battery_stats.sh
+
+[Install]
+WantedBy=multi-user.target

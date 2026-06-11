@@ -3,8 +3,8 @@
 COLOR="\033[32m"
 OUT="\033[0m"
 
-echo -e "${COLOR}\nLet's install some programs, that's very important for diary usage. The programs are: GoogleChrome, Vlc, Vim, Remmina, Copyq, Pavucontrol, Solaar, FastFetch, NetTools, SSH, Tmux.\n${OUT}"
-sudo dnf install vim vlc remmina copyq pavucontrol solaar google-chrome-stable fastfetch net-tools ssh tmux
+echo -e "${COLOR}\nLet's install some programs, that's very important for diary usage. The programs are: GoogleChrome, Vlc, Vim, Remmina, Copyq, Pavucontrol, Solaar, FastFetch, NetTools, SSH, Tmux, Gnome Extensions.\n${OUT}"
+sudo dnf install -y vim vlc remmina copyq pavucontrol solaar google-chrome-stable fastfetch net-tools ssh tmux gnome-extensions-app
 sudo systemctl enable --now sshd
 
 echo -e "${COLOR}\nNow let's install VLC codecs, for maximum video compatibility, it's normal if this command replace some codecs that would be installed.\n${OUT}"
